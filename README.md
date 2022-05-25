@@ -5,8 +5,8 @@
 | :--: | :--------------------------: | :-----------------: | :-------:|
 | 00 | Data Structure | 자료구조 | [바로가기](https://github.com/EUNJEONGMUN/CodingTest/tree/main/DataStructure) |
 | 01 | Data Structure 2 | 자료구조 2 | [바로가기](https://github.com/EUNJEONGMUN/CodingTest/tree/main/DataStructure2) |
-| 02 | Tree | 트리 | 바로가기 |
-| 03 | Math | 수학 | 바로가기 |
+| 02 | Tree | 트리 | [바로가기](https://github.com/EUNJEONGMUN/CodingTest/tree/main/Tree) |
+| 03 | Math | 수학 | [바로가기](https://github.com/EUNJEONGMUN/CodingTest/tree/main/Math) |
 | 04 | Greedy | 탐욕법 | 바로가기 |
 | 05 | Dynamic Programming 1 | 동적계획법 1 | 바로가기 |
 | 06 | Dynamic Programming 2 | 동적계획법 2 | 바로가기 |
