@@ -1,14 +1,16 @@
 # CodingTest
 코딩 테스트 대비 문제 풀이 모음 repository입니다.
 
+---
+
 | 순번 | Tag                          | 태그                | 바로가기 |
 | :--: | :--------------------------: | :-----------------: | :-------:|
 | 00 | Data Structure | 자료구조 | [바로가기](https://github.com/EUNJEONGMUN/CodingTest/tree/main/DataStructure) |
 | 01 | Data Structure 2 | 자료구조 2 | [바로가기](https://github.com/EUNJEONGMUN/CodingTest/tree/main/DataStructure2) |
 | 02 | Tree | 트리 | [바로가기](https://github.com/EUNJEONGMUN/CodingTest/tree/main/Tree) |
 | 03 | Math | 수학 | [바로가기](https://github.com/EUNJEONGMUN/CodingTest/tree/main/Math) |
-| 04 | Greedy | 탐욕법 | 바로가기 |
-| 05 | Dynamic Programming 1 | 동적계획법 1 | 바로가기 |
+| 04 | Greedy | 탐욕법 | [바로가기](https://github.com/EUNJEONGMUN/CodingTest/tree/main/Greedy) |
+| 05 | Dynamic Programming 1 | 동적계획법 1 | [바로가기](https://github.com/EUNJEONGMUN/CodingTest/tree/main/DynamicProgramming1) |
 | 06 | Dynamic Programming 2 | 동적계획법 2 | 바로가기 |
 | 07 | Two Pointer | 투 포인터 | 바로가기 |
 | 08 | Implementation | 구현 | 바로가기 |
@@ -30,5 +32,6 @@
 
 
 ---
-참고repo 
-[BlackBean99/baekjoon](https://github.com/BlackBean99/baekjoon)
+해당 레포지토리는 다음 git 저장소의 문제리스트를 바탕으로 만들었습니다.  
+💡 [tony9402/baekjoon](https://github.com/tony9402/baekjoon)
+
