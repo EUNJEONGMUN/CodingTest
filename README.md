@@ -11,8 +11,8 @@
 | 03 | Math | 수학 | [바로가기](https://github.com/EUNJEONGMUN/CodingTest/tree/main/Math) |
 | 04 | Greedy | 탐욕법 | [바로가기](https://github.com/EUNJEONGMUN/CodingTest/tree/main/Greedy) |
 | 05 | Dynamic Programming 1 | 동적계획법 1 | [바로가기](https://github.com/EUNJEONGMUN/CodingTest/tree/main/DynamicProgramming1) |
-| 06 | Dynamic Programming 2 | 동적계획법 2 | 바로가기 |
-| 07 | Two Pointer | 투 포인터 | 바로가기 |
+| 06 | Dynamic Programming 2 | 동적계획법 2 | [바로가기](https://github.com/EUNJEONGMUN/CodingTest/tree/main/DynamicProgramming2) |
+| 07 | Two Pointer | 투 포인터 | [바로가기](https://github.com/EUNJEONGMUN/CodingTest/tree/main/TwoPointer) |
 | 08 | Implementation | 구현 | 바로가기 |
 | 09 | Graph Traversal | 그래프 탐색 | 바로가기 |
 | 10 | Brute Force | 완전탐색 | 바로가기 |
