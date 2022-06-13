@@ -13,8 +13,8 @@
 | 05 | Dynamic Programming 1 | 동적계획법 1 | [바로가기](https://github.com/EUNJEONGMUN/CodingTest/tree/main/DynamicProgramming1) |
 | 06 | Dynamic Programming 2 | 동적계획법 2 | [바로가기](https://github.com/EUNJEONGMUN/CodingTest/tree/main/DynamicProgramming2) |
 | 07 | Two Pointer | 투 포인터 | [바로가기](https://github.com/EUNJEONGMUN/CodingTest/tree/main/TwoPointer) |
-| 08 | Implementation | 구현 | 바로가기 |
-| 09 | Graph Traversal | 그래프 탐색 | 바로가기 |
+| 08 | Implementation | 구현 | [바로가기](https://github.com/EUNJEONGMUN/CodingTest/tree/main/Implementation) |
+| 09 | Graph Traversal | 그래프 탐색 | [바로가기](https://github.com/EUNJEONGMUN/CodingTest/tree/main/GraphTraversal) |
 | 10 | Brute Force | 완전탐색 | 바로가기 |
 | 11 | Simulation | 시뮬레이션 | 바로가기 |
 | 12 | Binary Search | 이분탐색 | 바로가기 |
