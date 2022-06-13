@@ -4,7 +4,7 @@ input = sys.stdin.readline
 n, m = map(int, input().split())
 arr = [list(map(int, input().split())) for _ in range(n)]
 
-sum_arr = [[0]*(m+1) for _ in range(n+1)]
+sum_arr = [[0]*(m+1) for _ in range(n+1)]  # 합계를 담아줄 리스트
 
 # 행 별로 더해주기
 for i in range(1, n+1):
