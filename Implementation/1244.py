@@ -6,10 +6,12 @@ k = int(input())
 def woman(num):
     switch[num] = not switch[num]
     left, right = num, num
+    # 중간에서 시작해서 양쪽으로 확인
     while True:
         left -= 1
         right += 1
 
+        # 양쪽이 같으면 바꾸기
         if left > 0 and right <= n and switch[left] == switch[right]:
             switch[left] = not switch[left]
             switch[right] = not switch[right]
