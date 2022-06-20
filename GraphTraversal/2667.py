@@ -37,6 +37,7 @@ res = []
 for i in range(n):
     for j in range(n):
         if graph[i][j] == 1:
+            # bfs 탐색을 한 번 마치면 단지 완성
             res.append(bfs(i, j))
 res.sort()
 print(len(res))

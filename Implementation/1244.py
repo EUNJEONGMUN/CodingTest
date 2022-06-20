@@ -35,7 +35,7 @@ switch = switch[1:]
 k = 0
 while True:
     # 20개씩 출력
-    # boolean을 int로 바꾸어 출력
+    # bool을 int로 바꾸어 출력
     if k+20 > n:
         print(*list(map(int, switch))[k:])
         break
