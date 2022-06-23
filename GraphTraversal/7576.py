@@ -54,6 +54,10 @@ res = bfs(tomato)
 # else:
 #     print(res)
 
+
+# 위의 방법은 for문이 두 개라 else 문을 못 썼다.
+# mark의 추가변수가 더 필요함
+
 for i in range(n):
     if 0 in table[i]:
         print(-1)
