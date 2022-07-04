@@ -2,7 +2,7 @@ import sys
 from collections import deque
 input = sys.stdin.readline
 
-N, L, R = map(int, input().split())
+N, L, R = map(int, input().split())  # N*N 격자, L명 이상 R명 이하
 
 arr = [list(map(int, input().split())) for _ in range(N)]
 
@@ -44,10 +44,10 @@ def bfs(i, j):
                 visited[nx][ny] = True
                 cnt += arr[nx][ny]
 
-    avg = cnt//len(res)
+    avg = cnt//len(res)  # (연합의 인구수) / (연합을 이루고 있는 칸의 개수)
 
-    if len(res) > 1:
-        for a, b in res:
+    if len(res) > 1:  # 연합할 수 있는 나라가 있다면
+        for a, b in res:  # res에 저장된 연합할 나라들의 인구를 변경해준다.
             arr[a][b] = avg
         return True
     else:
@@ -60,7 +60,7 @@ while True:
     mark = False
     for i in range(N):
         for j in range(N):
-            if not visited[i][j] and bfs(i, j):
+            if not visited[i][j] and bfs(i, j):  # bfs 탐색을 통해 인구이동 할 나라를 탐색한다.
                 mark = True
 
     if mark:  # 인구 이동이 일어났다면
