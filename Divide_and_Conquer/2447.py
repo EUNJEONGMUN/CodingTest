@@ -1,21 +1,21 @@
-n = int(input())
-star = ["***", "* *", "***"]
-cnt = 0
-
-
-def getStars(star):
-    mat = []
-    for i in range(3 * len(star)):
-        if i // len(star) == 1:
-            mat.append(star[i % len(star)] + " " *
-                       len(star) + star[i % len(star)])
+def stars(n):
+    matrix = []
+    for i in range(3 * len(n)):
+        if i // len(n) == 1:
+            matrix.append(n[i % len(n)] + " " * len(n) + n[i % len(n)])
         else:
-            mat.append(star[i % len(star)] * 3)
-    return mat
+            matrix.append(n[i % len(n)] * 3)
+    return(list(matrix))
 
 
-for i in range(int(n**(1/3))-1):
-    star = getStars(star)
+star = ["***", "* *", "***"]
+n = int(input())
+k = 0
+while n != 3:
+    n = int(n / 3)
+    k += 1
 
+for i in range(k):
+    star = stars(star)
 for i in star:
     print(i)
