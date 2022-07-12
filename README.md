@@ -1,6 +1,8 @@
 # CodingTest
 코딩 테스트 대비 문제 풀이 모음 repository입니다.
 
+> 해당 레포지토리는 [tony9402/baekjoon](https://github.com/tony9402/baekjoon) 의 문제리스트를 바탕으로 만들었습니다.  
+
 <br>
 
 | 순번 | Tag                          | 태그                | 바로가기 |
@@ -32,6 +34,5 @@
 
 
 ---
-해당 레포지토리는 다음 git 저장소의 문제리스트를 바탕으로 만들었습니다.  
-💡 [tony9402/baekjoon](https://github.com/tony9402/baekjoon)
+
 
