@@ -23,8 +23,9 @@
 #             return 1
 #     return 0
 
-
 # print(solution())
+
+
 def make_table(pattern):
     table = [0]*len(pattern)
     j = 0
@@ -55,3 +56,12 @@ s = input()
 p = input()
 
 print(kmp(s, p))
+
+
+# s = input()
+# p = input()
+
+# if p in s:
+#     print(1)
+# else:
+#     print(0)
