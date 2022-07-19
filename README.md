@@ -24,7 +24,7 @@
 | 14 | Divide and conquer | 분할정복 | [바로가기](https://github.com/EUNJEONGMUN/CodingTest/tree/main/Divide_and_Conquer) |
 | 15 | Prefix Sum | 누적 합 | [바로가기](https://github.com/EUNJEONGMUN/CodingTest/tree/main/PrefixSum) |
 | 16 | String | 문자열 | [바로가기](https://github.com/EUNJEONGMUN/CodingTest/tree/main/String) |
-| 17 | Shortest Path | 최단거리 | 바로가기 |
+| 17 | Shortest Path | 최단거리 | [바로가기](https://github.com/EUNJEONGMUN/CodingTest/tree/main/ShortestPath) |
 | 18 | Topological Sorting | 위상정렬 | 바로가기 |
 | 19 | Disjoint Set | 분리 집합 | 바로가기 |
 | 20 | Minimum Spanning Tree(MST) | 최소 스패닝 트리 | 바로가기 |
