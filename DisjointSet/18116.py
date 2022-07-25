@@ -5,9 +5,7 @@ inupt = sys.stdin.readline
 def find_parent(x):  # 부모 찾기
     if parent[x] != x:  # 자신이 부모가 아니라면
         parent[x] = find_parent(parent[x])  # 다시 부모 찾기
-        return parent[x]
-    else:
-        return x
+    return parent[x]
 
 
 def union_parent(a, b):
