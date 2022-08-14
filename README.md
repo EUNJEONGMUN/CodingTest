@@ -1,7 +1,7 @@
 # CodingTest
 코딩 테스트 대비 문제 풀이 모음 repository입니다.
 
-> 해당 레포지토리는 [tony9402/baekjoon](https://github.com/tony9402/baekjoon) 의 문제리스트를 바탕으로 만들었습니다.  
+> 해당 repository는 [tony9402/baekjoon](https://github.com/tony9402/baekjoon) 의 문제리스트를 바탕으로 만들었습니다.  
 
 <br>
 
@@ -28,8 +28,8 @@
 | 18 | Topological Sorting | 위상정렬 | [바로가기](https://github.com/EUNJEONGMUN/CodingTest/tree/main/TopologicalSorting) |
 | 19 | Disjoint Set | 분리 집합 | [바로가기](https://github.com/EUNJEONGMUN/CodingTest/tree/main/DisjointSet) |
 | 20 | Minimum Spanning Tree(MST) | 최소 스패닝 트리 | [바로가기](https://github.com/EUNJEONGMUN/CodingTest/tree/main/MinimumSpanningTree) |
-| 21 | Trie | 트라이 | 바로가기 |
-| 22 | Dynamic Programming On Trees | 트리디피 | 바로가기 |
+| 21 | Trie | 트라이 |       |
+| 22 | Dynamic Programming On Trees | 트리디피 |       |
 
 
 
