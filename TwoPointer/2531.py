@@ -1,6 +1,7 @@
 from collections import defaultdict
 import sys
 input = sys.stdin.readline
+
 # 회전 초밥 벨트에 놓인 접시의 수 N, 초밥의 가짓수 d, 연속해서 먹는 접시의 수 k, 쿠폰 번호 c가
 n, d, k, c = map(int, input().split())
 arr = [int(input()) for _ in range(n)]
@@ -22,7 +23,7 @@ while right < len(arr):
     result = max(result, len(sushi))
 
     sushi[arr[left]] -= 1
-    if sushi[arr[left]] == 0:  # 초밥이 없다면 제거
+    if sushi[arr[left]] == 0:  # 초밥이 dictionary에 없다면 제거
         del sushi[arr[left]]
 
     # 한 칸씩 이동
