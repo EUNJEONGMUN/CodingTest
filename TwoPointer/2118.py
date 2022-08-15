@@ -29,12 +29,13 @@ input = sys.stdin.readline
 n = int(input())
 arr = [int(input()) for _ in range(n)]*2
 arr_sum = [0]*(n*2)
-for i in range(1, n*2):
+for i in range(1, n*2):  # 누적합 구하기
     arr_sum[i] = arr_sum[i-1]+arr[i-1]
 
 res = 0
 for left in range(n-1):
     for right in range(left+1, n):
+        # 시계 방향 vs 반시계방향
         res = max(res, min(arr_sum[right]-arr_sum[left],
                   arr_sum[left+n]-arr_sum[right]))
 
