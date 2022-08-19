@@ -1,6 +1,6 @@
-# Code Tree
-코딩 테스트 대비 CodeTree 문제 풀이 모음 repository입니다.
+# Simulation
 
+격자 안에서 완전 탐색, 회전 그리고 이동하는 법을 배우게 됩니다.
 <br>
 
 | 순번 | 태그                | 문제 개수 |

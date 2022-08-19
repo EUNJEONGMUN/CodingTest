@@ -1,4 +1,4 @@
-# LeetCode
+# Code Tree
 코딩 테스트 대비 CodeTree 문제 풀이 모음 repository입니다.
 
 <br>
