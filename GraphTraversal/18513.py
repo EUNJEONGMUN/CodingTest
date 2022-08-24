@@ -9,14 +9,6 @@ visited = dict()
 res = 0
 house = 0
 
-
-def change(x):
-    if x < 0:
-        return length-x
-    else:
-        return length+x
-
-
 for water in waters:
     visited[water] = 1
     q.append((water, 0))
