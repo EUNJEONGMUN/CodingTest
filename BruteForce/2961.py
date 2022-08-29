@@ -9,7 +9,7 @@ arr = [list(map(int, input().split())) for _ in range(n)]
 
 orders = []
 
-for i in range(1, n+1):
+for i in range(1, n+1):  # 1개부터 n개 선택
     orders.extend(list(combinations(list(range(n)), i)))
 
 res = INF
