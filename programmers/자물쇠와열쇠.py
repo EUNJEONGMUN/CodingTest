@@ -1,44 +1,45 @@
-def turn(arr):
-    return list(map(list, zip(*arr[::-1])))  # 시계방향 90도
+def check_range(x, y, n):
+    if n <= x < n*2 and n <= y < n*2:
+        return True
+    return False
+
+
+def is_possible(blank, key, x, y, n):
+    cnt = 0
+    for i in range(len(key)):
+        for j in range(len(key)):
+            if check_range(x+i, y+j, n) and key[i][j] == 1:
+                if (x+i-n, y+j-n) in blank:
+                    cnt += 1
+                else:
+                    return False
+    if cnt == len(blank):
+        return True
+    else:
+        return False
 
 
 def solution(key, lock):
-    n, m = len(key), len(key[0])
 
-    # 칸 끼리 더해서 모두 1이 되면!! -> 성공
-    # 하나라도 0이나 2이상이 있다면 -> 실패
+    n, m = len(lock), len(key)
+    blank = []
+    for i in range(n):
+        for j in range(n):
+            if lock[i][j] == 0:
+                blank.append((i, j))
 
-    for _ in range(3):
+    for _ in range(4):
 
-        for key_x in range(n):
-            for key_y in range(m):
-                mark = True
-                for i in range(n):
-                    for j in range(n):
-                        if key_x+i < n and key_y+j < m:
-                            print(i, j, key_x+i, key_y+j)
-                #             if lock[i][j]+key[key_x+i][key_y+j] != 1:
-                #                 mark = False
-                #                 break
-                #         else:
-                #             if lock[i][j] != 1:
-                #                 mark = False
-
-                #     if not mark:
-                #         break
-                # if mark:
-                #     return True
-
-        key = turn(key)
+        for x in range(n*3):
+            for y in range(n*3):
+                if is_possible(blank, key, x, y, n):
+                    return True
+        key = list(map(list, zip(*key[::-1])))
     return False
 
 
 print(solution([[0, 0, 0], [1, 0, 0], [0, 1, 1]],
       [[1, 1, 1], [1, 1, 0], [1, 0, 1]]))
 
-
-for key_x in range(n):
-    for key_y in range(n):
-        for lock_x in range(n):
-            for lock_y in range(m):
-                if key_y
+print(solution([[0, 0], [0, 0]], [[1, 0, 0], [1, 0, 0], [1, 1, 1]]))
+print(solution([[1, 0], [0, 0]], [[1, 1, 1], [1, 1, 1], [1, 1, 1]]))
