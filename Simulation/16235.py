@@ -109,14 +109,15 @@ def spring_and_summer():
     for i in range(n):
         for j in range(n):
             finish = []  # 산 나무들
-            tree_sort = sorted(trees[i][j])
+            tree_sort = sorted(trees[i][j])  # 나이 어린 순으로 정렬
             for age in tree_sort:
-                if nutrients[i][j] >= age:
-                    nutrients[i][j] -= age
-                    finish.append(age+1)
+                if nutrients[i][j] >= age:  # 나이만큼 양분을 먹을 수 있다면
+                    nutrients[i][j] -= age  # 양분 먹고
+                    finish.append(age+1)  # 저장
                 else:
+                    # 나이만큼 양분을 먹을 수 없다면, die 리스트에 저장
                     die.append((i, j, age))
-            trees[i][j] = finish[:]
+            trees[i][j] = finish[:]  # 산 나무들 저장
 
     # summer
     for x, y, age in die:
