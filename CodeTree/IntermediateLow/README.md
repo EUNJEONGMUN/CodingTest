@@ -4,4 +4,5 @@
 
 | 순번 | Tag                          | 태그                | 바로가기 |
 | :--: | :--------------------------: | :-----------------: | :-------:|
-| 00 | Simulation | 시뮬레이션 | [바로가기](https://github.com/EUNJEONGMUN/CodingTest/tree/main/CodeTree/IntermediateLow/Simulation)|
+| 00 | Simulation | 시뮬레이션 | [바로가기](./Simulation/)|
+| 00 | Backtracking | 백트래킹 | [바로가기](./Backtracking/)|

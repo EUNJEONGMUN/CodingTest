@@ -5,4 +5,4 @@
 
 | 순번 | Tag                          | 태그                | 바로가기 |
 | :--: | :--------------------------: | :-----------------: | :-------:|
-| 00 | Intermediate Low | 알고리즘 입문 | [바로가기](https://github.com/EUNJEONGMUN/CodingTest/tree/main/CodeTree/IntermediateLow)|
+| 00 | Intermediate Low | 알고리즘 입문 | [바로가기](./IntermediateLow/)|
