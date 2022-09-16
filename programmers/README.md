@@ -7,7 +7,10 @@
 ### 2022 KAKAO BLIND RECRUITMENT
 | 순번 | Level | 문제                | 바로가기 |
 | :--: | :-----: | :-----------------: | :-------:|
-| 00 | Lv.1 | 신고 결과 받기 |[바로가기](%EC%8B%A0%EA%B3%A0%EA%B2%B0%EA%B3%BC%EB%B0%9B%EA%B8%B0.py)|
+| 00 | Lv.1 | 신고 결과 받기 | [바로가기](%EC%8B%A0%EA%B3%A0%EA%B2%B0%EA%B3%BC%EB%B0%9B%EA%B8%B0.py)|
+| 01 | Lv.2 | K진수에서소수 개수 구하기 | [바로가기](k%EC%A7%84%EC%88%98%EC%97%90%EC%84%9C%EC%86%8C%EC%88%98%EA%B0%9C%EC%88%98%EA%B5%AC%ED%95%98%EA%B8%B0.py) |
+| 02 | Lv.2 | 주차 요금 계산 | [바로가기](주차요금계산.py)  |
+| 02 | Lv.2 | 양궁대회 | [바로가기](양궁대회.py) |
 ---
 
 ### 2021 KAKAO BLIND RECRUITMENT
