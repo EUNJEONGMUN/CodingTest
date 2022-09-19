@@ -28,7 +28,7 @@ def bf(now):
     # 자신을 제외한 모든 계란이 깨졌다면
     all_broken = True
     for i in range(n):
-        if n == now:
+        if i == now:
             continue
         if eggs[i][S] > 0:
             all_broken = False
