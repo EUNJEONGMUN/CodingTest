@@ -14,7 +14,8 @@ def bf(now):
         for i in range(n):  # 깨진 계란의 개수를 세어 res에 반영
             if eggs[i][S] <= 0:
                 cnt += 1
-        res = max(res, cnt)
+        if res < cnt:
+            res = cnt
         return
 
     # 단, 손에 든 계란이 깨졌거나 깨지지 않은 다른 계란이 없으면 치지 않고 넘어간다.
@@ -25,23 +26,26 @@ def bf(now):
         return
 
     # 자신을 제외한 모든 계란이 깨졌다면
+    all_broken = True
     for i in range(n):
         if n == now:
             continue
         if eggs[i][S] > 0:
+            all_broken = False
             break
-    else:
+
+    if all_broken:
         res = max(res, n-1)
         return
 
     for next_egg in range(n):
         # 깰 개란이 현재 계란이거나, 깨진 계란이라면 pass
-        if next_egg == now or eggs[next_egg][W] <= 0:
+        if next_egg == now or eggs[next_egg][S] <= 0:
             continue
         # 계란 깨기
         eggs[now][S] -= eggs[next_egg][W]
         eggs[next_egg][S] -= eggs[now][W]
-        bf(next_egg)  # 다음 계란 탐색
+        bf(now+1)  # 다음 계란 탐색
         # 계란 원상 복구
         eggs[now][S] += eggs[next_egg][W]
         eggs[next_egg][S] += eggs[now][W]
