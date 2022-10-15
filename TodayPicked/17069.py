@@ -48,21 +48,23 @@ n = int(input())
 arr = [list(map(int, input().split())) for _ in range(n)]
 dp = [[[0, 0, 0] for _ in range(n)] for _ in range(n)]
 dp[0][1][0] = 1
+# 0가로, 1세로, 2대각선
+
 for i in range(n):
     for j in range(n):
+        # 처음 놓여있는 칸이거나, 장애물이 있는 칸이면 pass
         if (i == 0 and j == 0) or (i == 0 and j == 1) or arr[i][j] == 1:
             continue
-        if i == 0 and arr[i][j-1] == 0:  # 맨 위 줄이면 왼쪽에서만 올 수 있음.
-            dp[i][j] = dp[i][j-1]
-        elif j == 0 and arr[i-1][j] == 0:  # 맨 첫째줄이면 위에서만 올 수 있음
-            dp[i][j] = dp[i-1][j]
+        if i == 0 and arr[i][j-1] == 0:  # 맨 첫째 행이면 왼쪽에서만 올 수 있음.
+            dp[i][j][0] = dp[i][j-1][0]
+        elif j == 0 and arr[i-1][j] == 0:  # 맨 첫째 열이면 위에서만 올 수 있음
+            dp[i][j][1] = dp[i-1][j][1]
         else:
-            if arr[i][j-1] == 0 and j-2 >= 0:
-                dp[i][j] = dp[i][j-1]
-            if arr[i-1][j] == 0 and i-2 >= 0:
-                dp[i][j] += dp[i-1][j]
+            if arr[i][j-1] == 0:  # 왼쪽에서 올 수 있는 경우
+                dp[i][j][0] = dp[i][j-1][0]+dp[i][j-1][2]
+            if arr[i-1][j] == 0:  # 위에서 올 수 있는 경우
+                dp[i][j][1] = dp[i-1][j][1]+dp[i-1][j][2]
+            if arr[i][j-1] == 0 and arr[i-1][j] == 0 and arr[i-1][j-1] == 0:  # 대각선에서 올 수 있는 경우
+                dp[i][j][2] = sum(dp[i-1][j-1])
 
-            if arr[i][j-1] == 0 and arr[i-1][j] == 0 and arr[i-1][j-1] == 0:
-                dp[i][j] += dp[i-1][j-1]
-
-print(dp[-1][-1])
+print(sum(dp[-1][-1]))
