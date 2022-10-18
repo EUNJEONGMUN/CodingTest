@@ -60,10 +60,8 @@ for i in range(n):
         elif j == 0 and arr[i-1][j] == 0:  # 맨 첫째 열이면 위에서만 올 수 있음
             dp[i][j][1] = dp[i-1][j][1]
         else:
-            if arr[i][j-1] == 0:  # 왼쪽에서 올 수 있는 경우
-                dp[i][j][0] = dp[i][j-1][0]+dp[i][j-1][2]
-            if arr[i-1][j] == 0:  # 위에서 올 수 있는 경우
-                dp[i][j][1] = dp[i-1][j][1]+dp[i-1][j][2]
+            dp[i][j][0] = dp[i][j-1][0]+dp[i][j-1][2]
+            dp[i][j][1] = dp[i-1][j][1]+dp[i-1][j][2]
             if arr[i][j-1] == 0 and arr[i-1][j] == 0 and arr[i-1][j-1] == 0:  # 대각선에서 올 수 있는 경우
                 dp[i][j][2] = sum(dp[i-1][j-1])
 
