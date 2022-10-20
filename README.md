@@ -43,4 +43,4 @@
 | :--------------------------: | :-----------------: | :-------:|
 | CodeTree | 코드트리 | [바로가기](https://github.com/EUNJEONGMUN/CodingTest/tree/main/CodeTree) |
 | LeetCode | 리트코드 | [바로가기](https://github.com/EUNJEONGMUN/CodingTest/tree/main/LeetCode) |
-| TodayPicked | 오늘의 문제 | [바로가기](https://github.com/EUNJEONGMUN/CodingTest/tree/main/LeetCode) |
+| TodayPicked | 오늘의 문제 | [바로가기](https://github.com/EUNJEONGMUN/CodingTest/tree/main/TodayPicked) |
