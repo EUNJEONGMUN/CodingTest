@@ -40,7 +40,7 @@ def bf(board, ax, ay, bx, by):
         if result[0] == False:  # 만약 상대방이 진다면
             can_win = True  # 내가 이김
             min_turn = min(min_turn, result[1])  # 내가 이겼을 경우는, 가장 최단 경우를 선택해야 함
-        elif can_win == False:  # 만약 상대방이 이긴다면
+        else:  # 만약 상대방이 이긴다면
             max_turn = max(max_turn, result[1])  # 즉, 내가 졌을 경우는 가장 오랫동안 이동해야 함.
 
     board[ax][ay] = 1  # 원상복귀
