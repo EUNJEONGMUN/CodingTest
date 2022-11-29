@@ -53,13 +53,9 @@
 
 
 from collections import deque
-dx = [0, 1, 0, -1]
-dy = [1, 0, -1, 0]
-N, M = 0, 0
 
 
 def solution(rc, operations):
-    global N, M
     N, M = len(rc), len(rc[0])
     rows = deque(deque(rc[i][1:-1]) for i in range(N))
     left = deque(rc[i][0] for i in range(N))
