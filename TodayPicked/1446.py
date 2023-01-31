@@ -29,8 +29,7 @@ N, D = map(int, input().split())
 short_path = [list(map(int, input().split())) for _ in range(N)]
 distance = [i for i in range(D+1)]
 for i in range(D+1):
-    if i > 0:
-        distance[i] = min(distance[i], distance[i-1]+1)
+    distance[i] = min(distance[i], distance[i-1]+1)
     for a, b, c in short_path:
         if i == a and b <= D and distance[i]+c < distance[b]:
             distance[b] = distance[i]+c
