@@ -20,7 +20,10 @@ for i in range(n+1):
         temp = original[i][j]-pre
         pre = original[i][j]
         original[i][j] = temp
-
+print("===========")
+for i in original:
+    print(*i)
+print("===========")
 res = [[0]*(n) for _ in range(n)]
 for i in range(n+1):
     for j in range(n+1):
