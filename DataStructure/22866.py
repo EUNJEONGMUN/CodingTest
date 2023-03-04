@@ -31,3 +31,34 @@
 #         print(0)
 #     else:
 #         print(len(a), a[0])
+
+n = int(input())
+IDX, HEIGHT = 0, 1
+buildings = [(i, b) for i, b in enumerate(
+    list(map(int, input().split())), start=1)]
+CNT, DIST, SHORTEST = 0, 1, 2
+answer = [[0, 1000000, 0] for _ in range(n+1)]
+
+
+def solution(arr):
+    stack = []
+    for idx, height in arr:
+        while stack and stack[-1][HEIGHT] <= height:
+            stack.pop()
+        if stack and stack[-1][HEIGHT] > height:
+            answer[idx][CNT] += len(stack)
+            if answer[idx][DIST] > abs(idx-stack[-1][IDX]):
+                answer[idx][DIST] = abs(idx-stack[-1][IDX])
+                answer[idx][SHORTEST] = stack[-1][IDX]
+        stack.append((idx, height))
+
+
+solution(buildings)
+buildings.sort(reverse=True)
+solution(buildings)
+
+for a in answer[1:]:
+    if a[CNT] == 0:
+        print(0)
+    else:
+        print(a[CNT], a[SHORTEST])
