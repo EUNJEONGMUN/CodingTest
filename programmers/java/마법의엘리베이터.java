@@ -6,11 +6,15 @@ import java.util.Deque;
 public class 마법의엘리베이터 {
 
     public static void main(String[] args) {
-        마법의엘리베이터_Solution solution = new 마법의엘리베이터_Solution();
+        마법의엘리베이터2_Solution solution = new 마법의엘리베이터2_Solution();
         System.out.println(solution.solution(16)); // 6
         System.out.println(solution.solution(2554)); // 16
         System.out.println(solution.solution(678)); // 8
         System.out.println(solution.solution(999)); // 2
+        System.out.println(solution.solution(535));
+        System.out.println(solution.solution(575));
+        System.out.println(solution.solution(545));
+        System.out.println(solution.solution(55));
     }
 }
 
@@ -60,5 +64,40 @@ class Position {
         this.storey = storey;
         this.count = count;
         this.digit = digit;
+    }
+
+    public Position(int storey, int count) {
+        this.storey = storey;
+        this.count = count;
+    }
+}
+
+
+class 마법의엘리베이터2_Solution {
+
+    public int solution(int storey) {
+        Deque<Position> deque = new ArrayDeque<>();
+        deque.push(new Position(storey, 0));
+        int answer = Integer.MAX_VALUE;
+        while (!deque.isEmpty()) {
+            Position position = deque.poll();
+            int now = position.storey;
+            int count = position.count;
+
+            if (now == 10) {
+                answer = Math.min(answer, count+1);
+                continue;
+            }
+
+            if (now <= 5) {
+                answer = Math.min(answer, count+now);
+                continue;
+            }
+
+            int mod = now % 10;
+            deque.push(new Position(now/10, count+mod));
+            deque.push(new Position(now/10+1, count+(10-mod)));
+        }
+        return answer;
     }
 }
