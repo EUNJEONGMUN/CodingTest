@@ -1,37 +1,34 @@
 import sys
 input = sys.stdin.readline
-
 n = int(input())
-strings = dict()
-for i in range(n):
-    string = input().strip()
-    if string not in strings:
-        strings[string] = i
+array = [input().strip() for i in range(n)]
+arr = sorted([(a, i) for i, a in enumerate(array)])
 
-sorted_strings = sorted(list(strings.items()), key=lambda x: (x[1], x[0]))
-max_value = -1
-S = sorted_strings[0]
-T = sorted_strings[1]
 
-for i in range(n-1):
+def get_same_prefix(x, y):
     cnt = 0
-    s, t = sorted_strings[i][0], sorted_strings[i+1][0]
-    for j in range(min(len(s), len(t))):
-        if s[j] != t[j]:
+    for i in range(min(len(x), len(y))):
+        if x[i] == y[i]:
+            cnt += 1
+        else:
             break
-        cnt += 1
-
-    if cnt > max_value:
-        S, T = sorted_strings[i], sorted_strings[i+1]
-        max_value = cnt
-    elif cnt == max_value:
-        if min(S[1], T[1]) > min(sorted_strings[i][1], sorted_strings[i+1][1]) and max(S[1], T[1]) > max(sorted_strings[i][1], sorted_strings[i+1][1]):
-            S, T = sorted_strings[i], sorted_strings[i+1]
+    return cnt
 
 
-if S[1] < T[1]:
-    print(S[0])
-    print(T[0])
-else:
-    print(T[0])
-    print(S[0])
+max_pre = [0]*n
+max_length = 0
+for i in range(n-1):
+    pre_length = get_same_prefix(arr[i][0], arr[i+1][0])
+    max_pre[arr[i][1]] = max(max_pre[arr[i][1]], pre_length)
+    max_pre[arr[i+1][1]] = max(max_pre[arr[i+1][1]], pre_length)
+    max_length = max(max_length, pre_length)
+
+save_pre = ""
+for i in range(n):
+    if max_pre[i] == max_length:
+        if save_pre == "":
+            save_pre = array[i][:max_length]
+            print(array[i])
+        elif save_pre == array[i][:max_length]:
+            print(array[i])
+            break
