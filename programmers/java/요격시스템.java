@@ -20,7 +20,7 @@ class 요격시스템_Solution {
         Arrays.sort(targets, (o1, o2) -> {
             return Integer.compare(o1[1], o2[1]);
         });
-        int answer = 1;
+        int answer = 0;
         int time = targets[0][1];
         for (int[] target : targets) {
             if (time <= target[0]) {
@@ -28,6 +28,7 @@ class 요격시스템_Solution {
                 time = target[1];
             }
         }
+        answer++;
         return answer;
     }
 }
