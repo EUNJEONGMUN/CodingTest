@@ -30,8 +30,8 @@ class 연속된부분수열의합_Solution {
             } else if (total > k) {
                 total -= sequence[left++];
             } else if (total < k) {
-                if (right + 1 < sequence.length) {
-                    total += sequence[++right];
+                if (++right < sequence.length) {
+                    total += sequence[right];
                 }
             }
 
