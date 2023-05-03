@@ -26,19 +26,14 @@ class 연속펄스부분수열의합_Solution {
     private long getMaxValue(int[] arr) {
         long maxValue = Long.MIN_VALUE;
         long value = 0;
-        int start = 0;
         for (int end = 0; end < arr.length; end++) {
             if (value + arr[end] < 0) {
-                start = end + 1;
+                maxValue = Math.max(value, maxValue);
                 value = 0;
-                continue;
             } else {
                 value += arr[end];
-                while (start <= end && arr[start] < 0) {
-                    value -= arr[start++];
-                }
+                maxValue = Math.max(value, maxValue);
             }
-            maxValue = Math.max(value, maxValue);
         }
         return maxValue;
     }
