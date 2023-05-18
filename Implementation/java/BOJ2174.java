@@ -7,15 +7,15 @@ import java.util.*;
 
 public class BOJ2174 {
     static int A, B, N, M;
-    static Map<String, Integer> direction = new HashMap<>() {{
+    static String[] direction = new String[]{"N", "E", "S", "W"};
+    static Map<String, Integer> directionMap = new HashMap<>() {{
         put("N", 0);
         put("E", 1);
         put("S", 2);
         put("W", 3);
     }};
-    static int[] dx = {-1, 0, 1, 0};
-    static int[] dy = {0, 1, 0, -1};
-    static int[][] robot;
+    static int[] dx = {0, 1, 0, -1};
+    static int[] dy = {1, 0, -1, 0};
     static List<Robot> robotList = new ArrayList<>();
 
     public static void main(String[] args) throws IOException {
@@ -28,57 +28,63 @@ public class BOJ2174 {
         N = Integer.parseInt(st.nextToken());
         M = Integer.parseInt(st.nextToken());
 
-        robot = new int[B + 1][A + 1];
-        for (int[] r : robot) {
-            Arrays.fill(r, -1);
-        }
-
         for (int i = 0; i < N; i++) {
             st = new StringTokenizer(br.readLine());
-            int y = Integer.parseInt(st.nextToken());
             int x = Integer.parseInt(st.nextToken());
+            int y = Integer.parseInt(st.nextToken());
             String dir = st.nextToken();
             robotList.add(new Robot(x, y, dir));
         }
+
         boolean flag = false;
         for (int i = 0; i < M; i++) {
             st = new StringTokenizer(br.readLine());
             int idx = Integer.parseInt(st.nextToken()) - 1;
-            String com = st.nextToken();
+            String op = st.nextToken();
             int cnt = Integer.parseInt(st.nextToken());
 
+            if (flag) {
+                continue;
+            }
+
             Robot now = robotList.get(idx);
-            int dir = direction.get(now.dir);
+            int dir = directionMap.get(now.dir);
 
-            if (com.equals("F")) {
-                int nx = now.x + (dx[dir] * cnt);
-                int ny = now.y + (dy[dir] * cnt);
+            if (op.equals("F")) {
+                for (int j = 0; j < cnt; j++) {
+                    int nx = now.x + dx[dir];
+                    int ny = now.y + dy[dir];
+                    int sameIdx = isSamePosition(idx, nx, ny);
+                    if (sameIdx != -1) {
+                        System.out.println("Robot " + (idx + 1) + " crashes into robot " + (sameIdx + 1));
+                        flag = true;
+                        break;
+                    }
+                    if (!checkRange(nx, ny)) {
+                        System.out.println("Robot " + (idx + 1) + " crashes into the wall");
+                        flag = true;
+                        break;
+                    }
+                    now.x = nx;
+                    now.y = ny;
+                }
 
-                if (!checkRange(nx, ny)) {
-                    System.out.println("Robot " + idx + " crashes into the wall");
-                    flag = true;
-                    break;
-                }
-                int sameIdx = isSamePosition(idx, nx, ny);
-                if (sameIdx != -1) {
-                    System.out.println("Robot " + idx + " crashes into robot " + sameIdx);
-                    flag = true;
-                    break;
-                }
-            } else if (com.equals("L")) {
+            } else if (op.equals("L")) {
                 for (int j = 0; j < cnt; j++) {
                     dir -= 1;
                     if (dir == -1) {
                         dir = 3;
                     }
                 }
-            } else if (com.equals("R")) {
+                now.dir = direction[dir];
+            } else if (op.equals("R")) {
                 for (int j = 0; j < cnt; j++) {
                     dir += 1;
                     if (dir == 4) {
                         dir = 0;
                     }
                 }
+                now.dir = direction[dir];
             }
         }
         if (!flag) {
@@ -101,9 +107,9 @@ public class BOJ2174 {
 
     static private boolean checkRange(int x, int y) {
         if (x > 0 && y > 0 && x <= A && y <= B) {
-            return false;
+            return true;
         }
-        return true;
+        return false;
     }
 
     static class Robot {
