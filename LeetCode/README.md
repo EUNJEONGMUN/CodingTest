@@ -7,3 +7,4 @@ LeetCode 문제 링크 🔗[Top Interview 150](https://leetcode.com/studyplan/to
 |:--:|:------------:|:--------------------------------------------------------------------------------:|
 | 00 | Two Pointers | [바로가기](https://github.com/EUNJEONGMUN/CodingTest/tree/main/LeetCode/TwoPointers) |
 | 01 |   Hashmap    |   [바로가기](https://github.com/EUNJEONGMUN/CodingTest/tree/main/LeetCode/HashMap)   |
+| 02 |    Matrix    |   [바로가기](https://github.com/EUNJEONGMUN/CodingTest/tree/main/LeetCode/Matrix)    |
