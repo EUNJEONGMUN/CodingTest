@@ -10,3 +10,4 @@ LeetCode 문제 링크 🔗[Top Interview 150](https://leetcode.com/studyplan/to
 | 02 |      Matrix      |      [바로가기](https://github.com/EUNJEONGMUN/CodingTest/tree/main/LeetCode/Matrix)      |
 | 03 |       Trie       |       [바로가기](https://github.com/EUNJEONGMUN/CodingTest/tree/main/LeetCode/Trie)       |
 | 04 | Divide & Conquer | [바로가기](https://github.com/EUNJEONGMUN/CodingTest/tree/main/LeetCode/DivideAndConquer) |
+| 04 |   Linked List    |    [바로가기](https://github.com/EUNJEONGMUN/CodingTest/tree/main/LeetCode/LinkedList)    |
