@@ -15,3 +15,4 @@ LeetCode 문제 링크 🔗[Top Interview 150](https://leetcode.com/studyplan/to
 | 07 |     Graph BFS      |     [바로가기](https://github.com/EUNJEONGMUN/CodingTest/tree/main/LeetCode/GraphBFS)     |
 | 08 |        Heap        |       [바로가기](https://github.com/EUNJEONGMUN/CodingTest/tree/main/LeetCode/Heap)       |
 | 09 |   Binary Search    |   [바로가기](https://github.com/EUNJEONGMUN/CodingTest/tree/main/LeetCode/BinarySearch)   |
+| 10 |    Backtracking    |   [바로가기](https://github.com/EUNJEONGMUN/CodingTest/tree/main/LeetCode/Backtracking)   |
